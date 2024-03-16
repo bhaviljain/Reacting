@@ -14,16 +14,11 @@ function App() {
 //   }
 // }
 
-const getColor=() =>{
-  if(progress < 1)
-  {
-    return "#00FF00"
-  }
-}
+
 
 const handleReset = () =>{
   setProgress(0)
-  isRunning(false)
+  setIsRunning(false)
 }
 
 useEffect(()=>{
@@ -39,7 +34,10 @@ useEffect(()=>{
           <div className='progress-label'>
                   {progress} %
           </div>
-          <button onClick={()=>setIsRunning(true)} className='btn'>Progress</button>
+          <button onClick={()=>setIsRunning(true)} className={`step
+    ${!isRunning ? "start" : "stop"}
+}`
+    }>Start</button>
           <button onClick={handleReset}  className='btn'>Reset</button>
         </div>
       </div>
