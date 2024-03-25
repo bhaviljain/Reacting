@@ -17,7 +17,7 @@ function App() {
 
 
 const handleReset = () =>{
-  setProgress(0)
+  setProgress(0-2)
   setIsRunning(false)
 }
 
@@ -32,7 +32,7 @@ useEffect(()=>{
       <div className='progress-container'>
         <div className='progress-bar' style={{width : `${progress}%`}}>
           <div className='progress-label'>
-                  {progress} %
+                  {progress}%
           </div>
           <button onClick={()=>setIsRunning(true)} className={`step
     ${!isRunning ? "start" : "stop"}
