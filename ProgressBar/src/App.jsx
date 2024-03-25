@@ -17,7 +17,7 @@ function App() {
 
 
 const handleReset = () =>{
-  setProgress(0-2)
+  setProgress(0)
   setIsRunning(false)
 }
 
