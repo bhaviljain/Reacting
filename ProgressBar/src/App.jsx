@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [progress, setProgress] = useState(0)
+
   const [isRunning, setIsRunning] = useState(false)
 
 // const handleProgress = () =>{
@@ -19,18 +20,22 @@ function App() {
 const handleReset = () =>{
   setProgress(0)
   setIsRunning(false)
+
 }
 
 useEffect(()=>{
   if(progress < 100 && isRunning){
-  setTimeout(()=>setProgress(prev => prev +=2),50)
+  setTimeout(()=>setProgress(prev => prev += 1),50)
   }
+
 },[progress, isRunning])
   return (
     <>
       <div>
       <div className='progress-container'>
-        <div className='progress-bar' style={{width : `${progress}%`}}>
+        <div className='progress-bar'
+         style={{width : `${progress}%`}}
+         >
           <div className='progress-label'>
                   {progress}%
           </div>
@@ -38,7 +43,11 @@ useEffect(()=>{
     ${!isRunning ? "start" : "stop"}
 }`
     }>Start</button>
-          <button onClick={handleReset}  className='btn'>Reset</button>
+          <button onClick={handleReset} className={`stop
+    ${!isRunning ? "stop" : "start"}
+}`
+          
+ } >Reset</button>
         </div>
       </div>
 

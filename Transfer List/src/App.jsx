@@ -35,7 +35,7 @@ function App() {
     }
   }
 
- console.log(Data);
+//  console.log(Data);
 
 const reset = (list) =>{
 return list.map((item)=>{

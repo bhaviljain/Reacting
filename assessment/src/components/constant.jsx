@@ -1,0 +1,1 @@
+export const Supported_Lang = [{indentifier:'Male',name:'Male'},{indentifier:'Female',name:'Female'},{indentifier:'Not to say',name:'Not to say'}]
