@@ -1,0 +1,25 @@
+.App{
+  background-color: black;
+  height: 100vh;
+  color: white;
+}
+.incompleted {
+  /* color: white; */
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+  cursor: pointer;
+  color: red;
+}
+.Todo{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
