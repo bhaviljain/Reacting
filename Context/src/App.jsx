@@ -7,6 +7,7 @@ import Home from './components/Home'
 import { UserDetails } from './components/UserDetails'
 function App() {
 
+  
   return (
     <>
     <nav className='flex gap-10 justify-center items-center'>
